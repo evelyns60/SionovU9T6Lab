@@ -33,9 +33,15 @@ public class ShippingTest {
     double totalCost = 0;
 
 
-    // add your code here
 
-    for(int i = 0;)
+    for(int i = 0; i < itemList.size(); i++) {
+      totalCost += itemList.get(i).getCost();
+      if (itemList.get(i) instanceof  InsuredShippingItem) {
+        totalCost += 30.0;
+      }
+    }
+
+
 
     // This should print 345.0 if your code is correct
     System.out.println(totalCost);
